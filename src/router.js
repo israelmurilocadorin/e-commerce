@@ -1,15 +1,18 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Teste from "./pages/Teste.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+import Home from './pages/Index'
+Vue.use(Router)
 
-export default new Router({
-    routes: [
-        {
-            path: "/teste",
-            name: "teste",
-            component: Teste
-        }
-    ]
+const router = new Router({
+  mode: 'history',        
+  routes: [
+    {
+      path: '',
+      component: Home,
+      name: 'Home'
+    }
+  ]
 })
+
+export default router
