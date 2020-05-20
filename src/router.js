@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from './pages/Index'
+import Home from './pages/Home'
+import FormularioProdutos from './pages/formularioProdutos'
+
 Vue.use(Router)
 
 const router = new Router({
@@ -11,6 +13,11 @@ const router = new Router({
       path: '',
       component: Home,
       name: 'Home'
+    },
+    {
+      path: '/produtos',
+      component: FormularioProdutos,
+      name: 'Formulário Produtos'
     }
   ]
 })
