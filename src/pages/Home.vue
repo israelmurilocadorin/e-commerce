@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div v-for="item in mokeProdutos" :key="item.id" class="col-md-4">
-                        <c-imagem/>
+                        <c-imagem :nome="item.nome" :valor="item.valor"/>
                     </div>
                 </div>
             </div>
@@ -28,15 +28,15 @@ export default {
             ],
 
             mokeProdutos:[
-                {id:1, nome:'a' ,valor:100.00 },
-                {id:2, nome:'a' ,valor:100.00 },
-                {id:3, nome:'a' ,valor:100.00 },
-                {id:4, nome:'a' ,valor:100.00 },
-                {id:5, nome:'a' ,valor:100.00 },
-                {id:6, nome:'a' ,valor:100.00 },
-                {id:7 , nome:'a' ,valor:100.00 },
-                {id:8 , nome:'a' ,valor:100.00 },
-                {id:9 , nome:'a' ,valor:100.00 },
+                {id:1, nome:'a' ,valor: "100.00" },
+                {id:2, nome:'a' ,valor: "100.00" },
+                {id:3, nome:'a' ,valor: "100.00" },
+                {id:4, nome:'a' ,valor: "100.00" },
+                {id:5, nome:'a' ,valor: "100.00" },
+                {id:6, nome:'a' ,valor: "100.00" },
+                {id:7 , nome:'a' ,valor: "100.00" },
+                {id:8 , nome:'a' ,valor: "100.00" },
+                {id:9 , nome:'a' ,valor: "100.00" },
             ]
         }
 

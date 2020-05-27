@@ -77,7 +77,7 @@ export default {
 
 #root {
   display: grid;
-  grid-template-rows: 10vh calc(200vh) 15vh; 
+  grid-template-rows: 10vh auto 15vh; 
   grid-template-areas: "header"
                       /* "nav" */
                       "content" 

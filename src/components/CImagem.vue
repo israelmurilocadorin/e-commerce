@@ -6,14 +6,13 @@
 
         <div class="img-descricao d-flex justify-content-between">
             <div style="">
-            Nome
+            {{ nome }}
             </div>
 
             <div class="">
-            R$ Valor 
+            R$ {{ valor }} 
             </div>
         </div>
-
     </div>
   </div>
 </template>
@@ -21,9 +20,23 @@
 <script>
 export default {
   name: 'CImagem',
-//   props: {
-//     StringBase64: [] String
-//   }
+  props: {
+    nome: {
+        type: String,
+        required: true,
+        default: null,
+    },
+    valor: {
+        type: [String, Number],
+        required: true,
+        default: null,
+    },
+    baseString64: {
+        type: String,
+        required: false,
+        default: '',
+    }
+  }
 }
 </script>
 
