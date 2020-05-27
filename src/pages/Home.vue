@@ -1,24 +1,21 @@
 <template>
-    <div class="div-main">
-        <!-- <input type="checkbox" id="chec">
-        <label for="chec">
-            <img src="../assets/menu.png">
-        </label> -->
-
-        <nav>
-            <ul>
-                <li v-for="item in menuLista" :key="item.id">
-                    <router-link :to="item.link">{{ item.nome }}</router-link>
-                </li>
-            </ul>
-        </nav>
+    <div class="home">
+        <div class="img-area">
+            <div class="container">
+                <div class="row">
+                    <div v-for="item in mokeProdutos" :key="item.id" class="col-md-4">
+                        <c-imagem/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 
 <script>
 export default {
-    name: 'FormularioProdutos',
+    name: 'Home',
     data() {
         return {
             nome: "FormulárioProdutos",
@@ -28,6 +25,18 @@ export default {
                 {id:3, nome: "Novidades", link: "/"},
                 {id:4, nome: "Contato" ,link: "/"},
                 {id:5, nome: "Sobre", link:"/"}
+            ],
+
+            mokeProdutos:[
+                {id:1, nome:'a' ,valor:100.00 },
+                {id:2, nome:'a' ,valor:100.00 },
+                {id:3, nome:'a' ,valor:100.00 },
+                {id:4, nome:'a' ,valor:100.00 },
+                {id:5, nome:'a' ,valor:100.00 },
+                {id:6, nome:'a' ,valor:100.00 },
+                {id:7 , nome:'a' ,valor:100.00 },
+                {id:8 , nome:'a' ,valor:100.00 },
+                {id:9 , nome:'a' ,valor:100.00 },
             ]
         }
 
@@ -36,78 +45,16 @@ export default {
 </script>
 
 <style  scoped>   
-    body{
-        /* background: url("../assets/cabide.jpg"); */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .home {
+        display: grid;
+        grid-template-rows: 200vh;
+        grid-template-areas: "img-area";
     }
 
-    *{
-        padding: 0;
-        margin: 0;
+    .img-area {
+        grid-area: "img-area";
+        background: black;
+        overflow: auto;
     }
 
-    a{
-        text-decoration: none;
-        color: white;
-    }
-
-    ul{
-        list-style: none;
-    }
-
-    input[type="checkbox"]
-    {
-        display: none;
-    }
-
-    nav
-    {
-        position: absolute;
-        left: -250px;
-        height: 100%; 
-        width: 250px;
-        background-color: rgba(16,16,16,0.5);
-        transition: all .5s;
-        z-index: 1;
-    }
-
-    input[type="checkbox"]:checked ~ nav
-    {
-        transform: translateX(250px);
-    }
-
-    ul{
-        position: absolute;
-        top: 55px;
-        width: 100%;
-    }
-     
-    a{
-        display: block;
-        padding: 15px 5px;
-    }
-
-    a:hover{
-        background-color: rgb(176, 224, 230);
-        color: black;
-    }
-
-    label{
-        position: absolute;
-        padding: 10px;
-        z-index: 1;
-    }
-
-    img{
-        width: 30px;
-    }
-
-    .div-promotion{
-        height: 250px;
-        width: 90%;
-        margin: 0 auto;
-        background-color: aquamarine;
-        position: relative;
-        margin-bottom: 120px;
-    }
 </style>

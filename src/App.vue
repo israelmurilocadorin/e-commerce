@@ -5,22 +5,21 @@
 
     <header class="root-header">
       <div class="container">
-        <div class="row">
+        <div class="d-flex justify-content-between">
           <h1 class="title" @click="openSite()">@Lerebi</h1>
+         
+          <!-- <div @click="openLogin()">
+            <ul class="d-flex m-2">
+              <li>Login</li>
+              <li>Cadastrar</li>
+            </ul>
+          </div>
+           -->
         </div>
       </div>
     </header>
-    
-    <nav>
-        <ul>
-          <li v-for="item in menuLista" :key="item.id">
-          <router-link :to="item.link">{{ item.nome }}</router-link>
-        </li>
-      </ul>
-    </nav>
 
     <div class="content">
-      <!--  -->
       <router-view/>
     </div>
     
@@ -61,9 +60,12 @@ export default {
   },
 
   methods: {
-    openSite() {
-      console.log('oi')
+    openSite () {
       window.open("https://www.instagram.com/lerebi_/")
+    },
+
+    openLogin () {
+      //TODO: Implementar login
     }
   }
 
@@ -75,8 +77,9 @@ export default {
 
 #root {
   display: grid;
-  grid-template-rows: 10vh calc(100vh) 15vh; 
+  grid-template-rows: 10vh calc(200vh) 15vh; 
   grid-template-areas: "header"
+                      /* "nav" */
                       "content" 
                       "footer";
 
@@ -111,14 +114,20 @@ export default {
   color: white;
   /* text-decoration-line: ; */
 }
+
 #root nav{
-  position: absolute;
+  grid-area: "nav";
+  color: #dd5b48;
+  float: left;;
+  /* border: 1px solid red;  */
+  /* position: absolute;
   left: -250px;
   height: 100%; 
   width: 250px;
   background-color: rgba(16,16,16,0.5);
   transition: all .5s;
-  z-index: 1;
+  z-index: 1; */
+
 }
 
 
