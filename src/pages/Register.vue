@@ -1,11 +1,17 @@
 <template>
     <form>    
-        <div class="div-login">
-            <div class="box-login">
+        <div class="div-register">
+            <div class="box-register">
                 <div class="paddin-top-form txt-center">
                     <label for="uname" class="txt-center"><b>Usuário</b></label>
                     <div class="placeholder-size">
                         <input type="text" class="form-control txt-center" placeholder="Digite o usuário" name="uname" required>     
+                    </div>
+                </div>
+                <div class="paddin-top-form txt-center">
+                    <label for="e-mail"><b>E-mail</b></label>
+                    <div class="placeholder-size">
+                        <input type="e-mail" class="form-control txt-center" placeholder="Digite seu e-mail" name="e-mail" required>
                     </div>
                 </div>
                 <div class="paddin-top-form txt-center">
@@ -14,8 +20,13 @@
                         <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
                     </div>
                 </div>
+                <div class="paddin-top-form txt-center">
+                    <label for="password-repeat"><b>Repita a Senha</b></label>
+                    <div class="placeholder-size">
+                        <input type="password" class="form-control txt-center" placeholder="Repita a senha" name="password-repeat" required>
+                    </div>
+                </div>
                 <div class="paddin-top-form">
-                    <button type="submit" class="btn btn-primary btn-login">Entrar</button>
                     <button type="submit" class="btn btn-primary btn-register">Registrar</button>
                 </div>
             </div>
@@ -28,7 +39,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default {
-  name: 'Login'
+  name: 'Register'
 }
 
 </script>
@@ -40,19 +51,19 @@ export default {
         font-size: 16px;
     }
 
-    .div-login {
+    .div-register {
         background-color: black;
         margin: 0 auto;
         margin-top: 150px;
         width: 360px;
-        height: 360px;
+        height: 500px;
         border-radius: 5px;
         margin-bottom: 70px;
     }
 
-    .box-login {
+    .box-register {
         background-color: white;
-        height: 255px;
+        height: 420px;
         margin: 50px; 
         position: relative;
         top: 50%;
@@ -75,15 +86,9 @@ export default {
         padding-top: 15px;
     }
 
-    .btn-login {
+    .btn-register {
         float: right;
         margin-right: 30px;
-        width: 85px;
-        margin-top: 4px;
-    }
-
-    .btn-register {
-        margin-left: 30px;
         width: 85px;
         margin-top: 4px;
     }
