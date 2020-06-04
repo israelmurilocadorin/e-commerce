@@ -17,9 +17,9 @@ const router = new Router({
       name: 'Home'
     },
     {
-      path: '/produtos',
-      component: FormularioProdutos,
-      name: 'Formulário Produtos'
+      path: '/cadastro-produtos',
+      name: 'Formulário Produtos',
+      component: FormularioProdutos
     },
     {
       path: '/login',
