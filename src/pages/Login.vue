@@ -4,15 +4,11 @@
             <div class="box-login">
                 <div class="paddin-top-form txt-center">
                     <label for="uname" class="txt-center"><b>Usuário</b></label>
-                    <div class="placeholder-size">
-                        <input type="text" class="form-control txt-center" placeholder="Digite o usuário" name="uname" required>     
-                    </div>
+                    <input type="text" class="form-control txt-center" placeholder="Digite o usuário" name="uname" required>     
                 </div>
                 <div class="paddin-top-form txt-center">
                     <label for="password"><b>Senha</b></label>
-                    <div class="placeholder-size">
-                        <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
-                    </div>
+                    <input type="password" class="form-control txt-center placeholder-size" placeholder="Digite a senha" name="password" required>
                 </div>
                 <div class="paddin-top-form">
                     <div class="div-buttons">
@@ -63,7 +59,6 @@ export default {
         top: 50%;
         transform: translateY(-50%);
         border-radius: 5px;
-
     }
 
     .div-buttons {
