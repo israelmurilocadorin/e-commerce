@@ -1,37 +1,43 @@
 <template>
-    <form>    
-        <div class="div-register">
-            <div class="box-register">
-                <div class="paddin-top-form txt-center">
-                    <label for="uname" class="txt-center"><b>Usuário</b></label>
-                    <div class="placeholder-size">
-                        <input type="text" class="form-control txt-center" placeholder="Digite o usuário" name="uname" required>     
-                    </div>
+    <div class="div-main">
+        <form>    
+                <div class="placeholder-size">
+                    <label for="e-mail" class="txt-color"><b>E-mail</b></label>
+                    <input type="e-mail" class="form-control txt-center" placeholder="Digite seu e-mail" name="e-mail" required>
                 </div>
-                <div class="paddin-top-form txt-center">
-                    <label for="e-mail"><b>E-mail</b></label>
-                    <div class="placeholder-size">
-                        <input type="e-mail" class="form-control txt-center" placeholder="Digite seu e-mail" name="e-mail" required>
-                    </div>
+
+                <div class="placeholder-size">
+                    <label for="password" class="txt-color"><b>Senha</b></label>
+                    <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
                 </div>
-                <div class="paddin-top-form txt-center">
-                    <label for="password"><b>Senha</b></label>
-                    <div class="placeholder-size">
-                        <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
-                    </div>
+                
+                <div class="placeholder-size">
+                    <label for="password-repeat" class="txt-color"><b>Repita a Senha</b></label>
+                    <input type="password" class="form-control txt-center" placeholder="Repita a senha" name="password-repeat" required>
                 </div>
-                <div class="paddin-top-form txt-center">
-                    <label for="password-repeat"><b>Repita a Senha</b></label>
-                    <div class="placeholder-size">
-                        <input type="password" class="form-control txt-center" placeholder="Repita a senha" name="password-repeat" required>
-                    </div>
+                
+                <div class="placeholder-size">
+                    <label for="password" class="txt-color"><b>Nome</b></label>
+                    <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
                 </div>
-                <div class="paddin-top-form">
+
+                <div class="placeholder-size">
+                    <label for="password" class="txt-color"><b>CPF</b></label>
+                    <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
+                </div>
+
+                <div class="empty-space"></div>
+
+                <div class="placeholder-size">
+                    <label for="password" class="txt-color"><b>Endereço</b></label>
+                    <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
+                </div>
+
+                <div class="">
                     <button type="submit" class="btn btn-primary btn-register">Registrar</button>
                 </div>
-            </div>
-        </div>  
-    </form>
+        </form>
+    </div>
 </template>
 
 <script>
@@ -51,9 +57,11 @@ export default {
         font-size: 16px;
     }
 
-    .div-register {
-        background-color: black;
+    .div-main{
         margin: 0 auto;
+    }
+
+    .div-register {
         margin-top: 150px;
         width: 360px;
         height: 500px;
@@ -73,13 +81,18 @@ export default {
     }
 
     .placeholder-size {
-        width: 200px;
-        margin: 0 auto;
+        display: inline-block;
+        margin-left: 50px;
+        width: 300px;
     }
 
-    .txt-center {
-        text-align: center;
-        color: black;
+    .empty-space {
+        margin-left: 20px;
+        width: 300px;
+    }
+
+    .txt-color {
+        color: white;
     }
 
     .paddin-top-form {

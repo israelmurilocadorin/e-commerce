@@ -1,5 +1,5 @@
 <template>
-    <form>    
+    <form action="/login" method="POST">    
         <div class="div-login">
             <div class="box-login">
                 <div class="paddin-top-form txt-center">
@@ -15,8 +15,13 @@
                     </div>
                 </div>
                 <div class="paddin-top-form">
-                    <button type="submit" class="btn btn-primary btn-login">Entrar</button>
-                    <button type="submit" class="btn btn-primary btn-register">Registrar</button>
+                    <div class="div-buttons">
+                        <button type="submit" class="btn btn-primary btn-login">Entrar</button>
+                        <button type="submit" class="btn btn-primary btn-register">Registrar</button>
+                    </div>
+                    <div class="recover-acc">
+                        <a href="">Recuperar conta</a>
+                    </div>
                 </div>
             </div>
         </div>  
@@ -52,13 +57,22 @@ export default {
 
     .box-login {
         background-color: white;
-        height: 255px;
+        height: 270px;
         margin: 50px; 
         position: relative;
         top: 50%;
         transform: translateY(-50%);
         border-radius: 5px;
 
+    }
+
+    .div-buttons {
+        height: 50px;
+    }
+
+    .recover-acc {
+        float: right;
+        margin-right: 30px;
     }
 
     .placeholder-size {

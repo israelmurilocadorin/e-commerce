@@ -1,24 +1,12 @@
 const mysql = require('mysql');
-
-const con = mysql.createConnection({
-    host: '', // O host do banco. Ex: localhost
-    user: '', // Um usuário do banco. Ex: user 
-    password: '', // A senha do usuário. Ex: user123
-    database: '' // A base de dados a qual a aplicação irá se conectar
+const connection = mysql.createConnection({
+    host: 'localhost', 
+    user: 'root', 
+    password: 'root', 
+    database: ''
 });
 
-con.connect((err) => {
-    if (err) {
-        console.log('Erro connecting to database...', err)
-        return
-    }
-    console.log('Connection established!')
-})
-
-con.end((err) => {
-    if(err) {
-        console.log('Erro to finish connection...', err)
-        return 
-    }
-    console.log('The connection was finish...')
+connection.connect(function(err){
+    if(err) return console.log(err);
+    console.log('Conectado! xD');
 })
