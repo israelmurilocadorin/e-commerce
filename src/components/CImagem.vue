@@ -2,7 +2,7 @@
   <div>
     <div class="img-container">
         <template>
-            <template v-if="baseString64">
+            <template v-if="baseString64 || baseString64Full">
                 <img id="id-img" :src="getBase64()" width="200" height="300" class="canvas-container" @click="openModel()"/>
             </template>
             <template v-else>
@@ -11,11 +11,11 @@
         </template>
 
         <div class="img-descricao d-flex justify-content-between">
-            <div style="">
+            <div v-if="nome" style="">
             {{ nome }}
             </div>
 
-            <div class="">
+            <div v-if="valor" class="">
             R$ {{ valor }} 
             </div>
         </div>
@@ -34,10 +34,15 @@ export default {
         },
         valor: {
             type: [String, Number],
-            required: true,
+            required: false,
             default: null,
         },
         baseString64: {
+            type: String,
+            required: false,
+            default: null,
+        },
+        baseString64Full: {
             type: String,
             required: false,
             default: '',
@@ -55,6 +60,11 @@ export default {
         },
 
         getBase64 () {
+            if(this.baseString64Full) {
+                return this.baseString64Full
+
+            }
+
             if (this.baseString64) {
                 return 'data:image/png;base64,'+ this.baseString64
 
