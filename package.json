@@ -5,14 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve --Host localhost",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "create-database" : "npx sequelize db:create && npx sequelize db:migrate" 
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.14.0",
     "core-js": "^3.6.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
+    "mysql2": "^2.1.0",
     "popper.js": "^1.16.1",
+    "sequelize": "^5.21.12",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
   },
@@ -23,6 +28,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "sequelize-cli": "^5.5.1",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

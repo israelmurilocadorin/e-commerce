@@ -7,17 +7,17 @@
                     
                     <div class="row">    
                         <div class="col-md-6 form-group">
-                            <label for="nome_produto">Nome produto</label>
+                            <label for="nome_produto" class="col-form-label">Nome produto</label>
                             <input v-model="form.nome" type="text" name="nome_produto" id="nome_produto" class="form-control">
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="valor">Valor</label>
+                            <label for="valor" class="col-form-label">Valor</label>
                             <input type="number" v-model="form.valor" name="valor" id="valor" class="form-control">
                         </div>
 
                         <div class="col-md-12 form-group">
-                            <label for="img_1">Colocar Imagens: ( {{ numeroImagens }} / 3)</label>
+                            <label for="img_1" class="col-form-label">Colocar Imagens: ( {{ numeroImagens }} / 3)</label>
                             <input type="file" @change="previewFiles" multiple>
                         </div>
 
