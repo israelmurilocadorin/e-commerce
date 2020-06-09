@@ -6,19 +6,19 @@
                 <input type="e-mail" class="form-control txt-center" placeholder="Digite seu e-mail" name="e-mail" required>
 
                 <label for="password" class="txt-color"><b>Senha</b></label>
-                <input type="password" class="form-control txt-center" placeholder="Digite a senha" name="password" required>
+                <input type="password" class="form-control txt-center" placeholder="Digite sua senha" name="password" required>
 
                 <label for="password-repeat" class="txt-color"><b>Repita a Senha</b></label>
-                <input type="password" class="form-control txt-center" placeholder="Repita a senha" name="password-repeat" required>
+                <input type="password" class="form-control txt-center" placeholder="Repita sua senha" name="password-repeat" required>
 
-                <label for="password" class="txt-color"><b>Nome</b></label>
-                <input type="password" class="form-control txt-center" placeholder="Digite seu nome" name="password" required>
+                <label for="name" class="txt-color"><b>Nome</b></label>
+                <input type="text" class="form-control txt-center" placeholder="Digite seu nome" name="name" required>
 
-                <label for="password" class="txt-color"><b>CPF</b></label>
-                <input type="password" class="form-control txt-center" placeholder="Digite seu CPF" name="password" required>
+                <label for="cpf" class="txt-color"><b>CPF</b></label>
+                <input type="number" class="form-control txt-center" placeholder="Digite seu CPF" name="cpf" required>
 
-                <label for="password" class="txt-color"><b>Endereço</b></label>
-                <input type="password" class="form-control txt-center" placeholder="Digite seu endereço" name="password" required>
+                <label for="endereco" class="txt-color"><b>Endereço</b></label>
+                <input type="text" class="form-control txt-center" placeholder="Digite seu endereço" name="endereco" required>
 
             <div class="button-register">
                 <button type="submit" class="btn btn-primary button-register">Registrar</button>
