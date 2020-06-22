@@ -1,22 +1,34 @@
 <template>
-    <form name="formuser" action="user.js" method="POST">    
+    <form>    
         <div class="div-login">
             <div class="box-login">
                 <div class="paddin-top-form txt-center">
                     <label for="e-mail" class="txt-center"><b>E-mail</b></label>
                     <div class="size">
-                        <input type="e-mail" id="user_email" class="form-control txt-center" placeholder="Digite seu e-mail" name="e-mail" required>     
+                        <input 
+                            type="e-mail" 
+                            v-moldel="form.email"
+                            class="form-control txt-center" 
+                            placeholder="Digite seu e-mail" 
+                            required
+                        >     
                     </div>
                 </div>
                 <div class="paddin-top-form txt-center">
                     <label for="password"><b>Senha</b></label>
                     <div class="size">
-                        <input type="password" id="user_password" class="form-control txt-center" placeholder="Digite sua senha" name="password" required>
+                        <input 
+                            type="password" 
+                            v-model="form.password"
+                            class="form-control txt-center" 
+                            placeholder="Digite sua senha" 
+                            required
+                        >
                     </div>
                 </div>
                 <div class="paddin-top-form">
                     <div class="div-buttons">
-                        <button type="submit" onclick="login()" class="btn btn-primary btn-login">Entrar</button>
+                        <button type="submit" @click="login()" class="btn btn-primary btn-login">Entrar</button>
                         <button type="submit" class="btn btn-primary btn-register">Registrar</button>
                     </div>
                     <div class="recover-acc">
@@ -33,35 +45,44 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default {
-  name: 'Login'
-}
-
-function login() {
-
-    var done = 0;
-    var email = document.getElementsById('user_email')[0].value;
-    email = email.toLowerCase();
-
-    var password = document.getElementsById('user_password')[0].value;
-    password = password.toLowerCase();
-
-    if(email == "1" && password == "1") {
-        window.location = "/Home.vue";
-        done = 1;
-    }
-    
-    if(done == 0) {
-        alert("Dados incorretos"); 
+    name: 'Login',
+    data() {
+        return {
+            form: {
+                email: "",
+                password: ""
+            }
+        }
+    },
+    methods: {
+        login() {
+            console(this.form.email, this.form.password)
+            if(this.form.email != "" && this.form.password != "") {
+                if(this.form.email == this.$parent.mockAccount.email && this.form.password == this.$parent.mockAccount.password) {
+                    this.$emit("authenticated", true);
+                    this.$router.replace('home');
+                } else {
+                    console.log("Usuário ou senha incorreto");
+                }
+            } else {
+                console.log("Coloque o usuário e senha para entrar");
+            }
+        }
     }
 }
 
 </script>
 
+<style scoped>
+    body {
+        background-color: black;
+    }
+</style>
+
 <style>
-    
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 16px;
+        font-size: 16px;  
     }
 
     .div-login {

@@ -18,6 +18,17 @@
         </div>
       </div>
     </header>
+    
+    <nav class="nav">
+      <ul>
+        <li>Home</li>
+        <li>Contato</li>
+        <li>Produtos</li>
+        <li>Novidades</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+      </ul>
+    </nav>
 
     <div class="content">
       <router-view/>
@@ -26,10 +37,10 @@
     <footer class="root-footer">
       <div class="container">
           <div class="row">
-                <div v-for="(rede, index) in redesSocias" :key="index" class="col-md-2 p-2">
-                  <div class="card-rodape-header">{{rede.midia}}</div>
-                  <a :href="rede.link" target="_blank">{{rede.nome}}</a>
-                </div>
+            <div v-for="(rede, index) in redesSocias" :key="index" class="col-md-2 p-2">
+              <div class="card-rodape-header">{{rede.midia}}</div>
+              <a :href="rede.link" target="_blank">{{rede.nome}}</a>
+            </div>
           </div>
       </div>
     </footer>
@@ -68,7 +79,6 @@ export default {
       //TODO: Implementar login
     }
   }
-
 }
 </script>
 
@@ -77,12 +87,11 @@ export default {
 
 #root {
   display: grid;
-  grid-template-rows: 10vh auto 15vh; 
-  grid-template-areas: "header"
-                      /* "nav" */
+  grid-template-rows: 10vh 8vh auto 15vh; 
+  grid-template-areas:"header"
+                      "nav"
                       "content" 
                       "footer";
-
 }
 
 #root .root-header {
@@ -99,9 +108,18 @@ export default {
   cursor: pointer;
 }
 
+#root .nav {
+  grid-area: "nav";
+  background-color: white;
+}
+
+li {
+  display: inline-block;
+  padding: 14px 16px;
+}
+
 #root .content {
   grid-area: "content";
-  background:black;
   color: white;
 }
 
@@ -110,26 +128,10 @@ export default {
   background: #dd5b48; 
 }
 
-#root .root-footer a{
+#root .root-footer a {
   color: white;
   /* text-decoration-line: ; */
 }
-
-#root nav{
-  grid-area: "nav";
-  color: #dd5b48;
-  float: left;;
-  /* border: 1px solid red;  */
-  /* position: absolute;
-  left: -250px;
-  height: 100%; 
-  width: 250px;
-  background-color: rgba(16,16,16,0.5);
-  transition: all .5s;
-  z-index: 1; */
-
-}
-
 
 /* BreakPoint */
 @media screen and (max-width: 760px){
