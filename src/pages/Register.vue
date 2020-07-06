@@ -50,6 +50,7 @@ export default {
         padding-top: 40px;
         padding-bottom: 30px;
         background-color: white;
+        margin-bottom: 40px;
     }
 
     .txt-color {
@@ -64,6 +65,7 @@ export default {
         float: left;
         margin-top: 10px;
         width: 100%;
+        border-radius: 0px;
     }
 
 </style>

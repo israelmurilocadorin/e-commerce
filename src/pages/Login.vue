@@ -1,5 +1,5 @@
 <template>
-    <form>    
+    <form @submit.prevent="login()" >    
         <div class="div-login">
             <div class="box-login">
                 <div class="paddin-top-form txt-center">
@@ -10,7 +10,6 @@
                             v-moldel="form.email"
                             class="form-control txt-center" 
                             placeholder="Digite seu e-mail" 
-                            required
                         >     
                     </div>
                 </div>
@@ -22,7 +21,6 @@
                             v-model="form.password"
                             class="form-control txt-center" 
                             placeholder="Digite sua senha" 
-                            required
                         >
                     </div>
                 </div>
@@ -54,19 +52,12 @@ export default {
             }
         }
     },
+    validations: {
+        
+    },
     methods: {
         login() {
-            console(this.form.email, this.form.password)
-            if(this.form.email != "" && this.form.password != "") {
-                if(this.form.email == this.$parent.mockAccount.email && this.form.password == this.$parent.mockAccount.password) {
-                    this.$emit("authenticated", true);
-                    this.$router.replace('home');
-                } else {
-                    console.log("Usuário ou senha incorreto");
-                }
-            } else {
-                console.log("Coloque o usuário e senha para entrar");
-            }
+            console.log(this.email, this.pass)
         }
     }
 }
@@ -74,9 +65,9 @@ export default {
 </script>
 
 <style scoped>
-    body {
+    /* body {
         background-color: black;
-    }
+    } */
 </style>
 
 <style>
@@ -86,13 +77,12 @@ export default {
     }
 
     .div-login {
-        background-color: black;
         margin: 0 auto;
-        margin-top: 150px;
+        margin-top: 70px;
         width: 360px;
         height: 360px;
         border-radius: 5px;
-        margin-bottom: 70px;
+        margin-bottom: 100px;
     }
 
     .box-login {
@@ -103,7 +93,6 @@ export default {
         top: 50%;
         transform: translateY(-50%);
         border-radius: 5px;
-
     }
 
     .div-buttons {
@@ -116,7 +105,6 @@ export default {
     }
 
     .size {
-
         width: 200px;
         margin: 0 auto;
     }
@@ -130,16 +118,22 @@ export default {
         padding-top: 15px;
     }
 
+    .form-control {
+        border-radius: 0px;
+    }
+
     .btn-login {
         float: right;
         margin-right: 30px;
         width: 85px;
         margin-top: 4px;
+        border-radius: 0px;
     }
 
     .btn-register {
         margin-left: 30px;
         width: 85px;
         margin-top: 4px;
+        border-radius: 0px;
     }
 </style>

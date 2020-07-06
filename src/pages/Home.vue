@@ -14,8 +14,17 @@
 
 
 <script>
+import Product from '../services/product'
+
 export default {
     name: 'Home',
+
+    mounted(){
+        Product.listar().then(resposta => {
+            console.log(resposta)
+        })
+    },
+
     data() {
         return {
             nome: "FormulárioProdutos",

@@ -22,11 +22,11 @@
     <nav class="nav">
       <ul>
         <li>Home</li>
-        <li>Contato</li>
         <li>Produtos</li>
         <li>Novidades</li>
         <li>Contato</li>
         <li>Sobre</li>
+        <router-link>{{menuLista.nome}}</router-link>
       </ul>
     </nav>
 
@@ -57,16 +57,16 @@ export default {
   data () {
     return {
       menuLista:[
-            {id:1, nome: "Home", link: "/"},
-            {id:2, nome: "Produtos", link: "/produtos"},
-            {id:3, nome: "Novidades", link: "/"},
-            {id:4, nome: "Contato" ,link: "/"},
-            {id:5, nome: "Sobre", link:"/"}
-        ],
-        redesSocias: [
-          {nome: "@lerebi", midia:"Instagram" , link: "https://www.instagram.com/lerebi_/"},
-          {nome: "@lerebi", midia:"Facebook",  link: "https://www.facebook.com/lerebi/"}
-        ]
+        {id:1, nome: "Home", link: "/"},
+        {id:2, nome: "Produtos", link: "/produtos"},
+        {id:3, nome: "Novidades", link: "/"},
+        {id:4, nome: "Contato" ,link: "/"},
+        {id:5, nome: "Sobre", link:"/"}
+      ],
+      redesSocias: [
+        {nome: "@lerebi", midia:"Instagram" , link: "https://www.instagram.com/lerebi_/"},
+        {nome: "@lerebi", midia:"Facebook",  link: "https://www.facebook.com/lerebi/"}
+      ]
     }
   },
 
