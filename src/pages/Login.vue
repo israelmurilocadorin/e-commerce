@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="login()" >    
+    <form>    
         <div class="div-login">
             <div class="box-login">
                 <div class="paddin-top-form txt-center">
@@ -30,7 +30,7 @@
                         <button type="submit" class="btn btn-primary btn-register">Registrar</button>
                     </div>
                     <div class="recover-acc">
-                        <a href="">Recuperar conta</a>
+                        <a href="/recuperar_senha">Recuperar conta</a>
                     </div>
                 </div>
             </div>
@@ -74,6 +74,7 @@ export default {
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 16px;  
+        background-image: url('../assets/cloud.jpg');
     }
 
     .div-login {

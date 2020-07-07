@@ -8,25 +8,20 @@
         <div class="d-flex justify-content-between">
           <h1 class="title" @click="openSite()">@Lerebi</h1>
          
-          <!-- <div @click="openLogin()">
-            <ul class="d-flex m-2">
-              <li>Login</li>
-              <li>Cadastrar</li>
-            </ul>
-          </div>
-           -->
         </div>
       </div>
     </header>
     
     <nav class="nav">
       <ul>
-        <li>Home</li>
-        <li>Produtos</li>
-        <li>Novidades</li>
-        <li>Contato</li>
-        <li>Sobre</li>
-        <router-link>{{menuLista.nome}}</router-link>
+        <li><a href="/">Home</a></li>
+        <li><a href="/produtos">Produtos</a></li>
+        <li><a href="/novidades">Novidades</a></li>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/login">Entrar</a></li>
+        <li><a href="/register">Registrar</a></li>
+        <li><a href="/cadastro_produtos">Cadastro Produtos</a></li>
       </ul>
     </nav>
 
@@ -56,13 +51,6 @@ export default {
   },
   data () {
     return {
-      menuLista:[
-        {id:1, nome: "Home", link: "/"},
-        {id:2, nome: "Produtos", link: "/produtos"},
-        {id:3, nome: "Novidades", link: "/"},
-        {id:4, nome: "Contato" ,link: "/"},
-        {id:5, nome: "Sobre", link:"/"}
-      ],
       redesSocias: [
         {nome: "@lerebi", midia:"Instagram" , link: "https://www.instagram.com/lerebi_/"},
         {nome: "@lerebi", midia:"Facebook",  link: "https://www.facebook.com/lerebi/"}
@@ -84,6 +72,18 @@ export default {
 
 <style>
 * {padding: 0; margin: 0;}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: hotpink;
+}
 
 #root {
   display: grid;

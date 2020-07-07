@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from './pages/Home'
+import Produtos from './pages/Produtos'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import FormularioProdutos from './pages/formularioProdutos'
+import CadastroProdutos from './pages/CadastroProdutos'
+import RecuperarSenha from './pages/RecuperarSenha'
 
 Vue.use(Router)
 
@@ -18,8 +20,8 @@ const router = new Router({
     },
     {
       path: '/produtos',
-      component: FormularioProdutos,
-      name: 'Formulário Produtos'
+      component: Produtos,
+      name: 'Produtos'
     },
     {
       path: '/login',
@@ -30,6 +32,16 @@ const router = new Router({
       path: '/register',
       component: Register,
       name: 'Register'
+    },
+    {
+      path: '/cadastro_produtos',
+      component: CadastroProdutos,
+      name: 'CadastroProdutos'
+    },
+    {
+      path: '/recuperar_senha',
+      component: RecuperarSenha,
+      name: 'RecuperarSenha'
     }
   ]
 })
