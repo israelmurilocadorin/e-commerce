@@ -15,6 +15,7 @@
                     <label for="fem"><input type="checkbox" name="fem"/> Feminino</label>
                 </div>    
                 
+                <input id="input-b2" name="input-b2" type="file" class="file" data-show-preview="false">
 
                 <div class="button-register">
                     <button type="submit" class="btn btn-primary button-cadastrar">Cadastrar</button>
@@ -42,7 +43,7 @@ export default {
         margin-top: 150px;
         margin-bottom: 200px;
         padding-top: 1px;
-        height: 300px;
+        height: 330px;
         width: 370px;
         background-color: white;
         border-radius: 5px;

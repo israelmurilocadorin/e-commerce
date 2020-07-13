@@ -58,6 +58,7 @@ export default {
     .box-recovery {
         background-color: white;
         height: 170px;
+        width: 310px;
         margin: 50px; 
         position: relative;
         top: 50%;

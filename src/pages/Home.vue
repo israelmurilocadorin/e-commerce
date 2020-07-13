@@ -45,7 +45,7 @@ export default {
     }
 
     .img-mid {
-        background-color: #363636;
+        background-color: #dd5b48;
         margin: 0 auto;
         margin-bottom: 100px;
         width: 900px;
